@@ -1,6 +1,4 @@
 <img src="https://hermes.dio.me/tracks/169e3d0f-263a-4efb-86c5-244bdf1ce8d6.png" width=100>
-<br>
-<br>
 
 # Lista de Tarefas
 
