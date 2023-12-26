@@ -1,31 +1,14 @@
-# DIO - Trilha .NET - API e Entity Framework
-www.dio.me
+<img src="https://hermes.dio.me/tracks/169e3d0f-263a-4efb-86c5-244bdf1ce8d6.png" width=100>
+<br>
+<br>
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de API e Entity Framework, da trilha .NET da DIO.
+# Lista de Tarefas
 
-## Contexto
-Você precisa construir um sistema gerenciador de tarefas, onde você poderá cadastrar uma lista de tarefas que permitirá organizar melhor a sua rotina.
+A proposta deste desafio é construir um sistema gerenciador de tarefas, onde o usuário poderá cadastrar uma lista de tarefas que permitirá organizar melhor a sua rotina.
 
-Essa lista de tarefas precisa ter um CRUD, ou seja, deverá permitir a você obter os registros, criar, salvar e deletar esses registros.
+A aplicação é um CRUD do tipo `webapi` do .NET e utiliza o `Entity Framework`.
 
-A sua aplicação deverá ser do tipo Web API ou MVC, fique a vontade para implementar a solução que achar mais adequado.
-
-A sua classe principal, a classe de tarefa, deve ser a seguinte:
-
-![Diagrama da classe Tarefa](diagrama.png)
-
-Não se esqueça de gerar a sua migration para atualização no banco de dados.
-
-## Métodos esperados
-É esperado que você crie o seus métodos conforme a seguir:
-
-
-**Swagger**
-
-
-![Métodos Swagger](swagger.png)
-
+## Sobre o projeto
 
 **Endpoints**
 
@@ -41,7 +24,7 @@ Não se esqueça de gerar a sua migration para atualização no banco de dados.
 | GET    | /Tarefa/ObterPorStatus  | status    | N/A           |
 | POST   | /Tarefa                 | N/A       | Schema Tarefa |
 
-Esse é o schema (model) de Tarefa, utilizado para passar para os métodos que exigirem
+## Schema das tarefas
 
 ```json
 {
@@ -53,6 +36,31 @@ Esse é o schema (model) de Tarefa, utilizado para passar para os métodos que e
 }
 ```
 
+## Como testar
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+1. Substitua a string de conexão do seu banco de dados no arquivo [`appsettings.Development.json`](appsettings.Development.json);
+
+2. Com o `.NET` e o `Entity Framework` já instalados no seu pc e o SQL Server iniciado, execute o comando:
+
+    ```bash
+      dotnet-ef migrations add TabelaTarefas
+    ```
+
+3. Atualize o seu banco
+
+    ```bash
+      dotnet-ef database update
+    ```
+
+4. Por último, basta rodar o comando abaixo e acessar o link fornecido no terminal:
+
+    ```bash
+      dotnet watch run
+    ```
+
+## Contribuição
+
+Caso você encontrei algum erro ou queira fazer alguma melhoria, sinta-se à vontade para abrir um Pull Request ou uma issue!
+
+---
+Obrigada por visitar meu repositório e não esquece de visitar meus outros projetos! 💜
